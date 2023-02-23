@@ -1,18 +1,19 @@
 import { Avatar, Box, Button, Divider } from '@mui/material'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { AppState } from '../../context/ContextProvider';
 import ThemeToggleButton from './ThemeToggleButton'
 import logo from '../../assets/logo.png';
-import LogoutIcon from '@mui/icons-material/Logout';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import GroupsIcon from '@mui/icons-material/Groups';
+import Alert from './Alert';
 
 
 function SidebarComponents() {
   const { thememode } = AppState()
   const navigate = useNavigate();
+
   return (
     <Box sx={{ height: 1, overflow: "scroll" }}>
 
@@ -57,7 +58,7 @@ function SidebarComponents() {
           </Button>
 
           <Button sx={{ marginY: 1 }} onClick={() => navigate("/dashboard/myteam")} >
-           <GroupsIcon sx={{ marginX: 1 }} /> my teams
+            <GroupsIcon sx={{ marginX: 1 }} /> my teams
           </Button>
 
         </Box>
@@ -66,10 +67,8 @@ function SidebarComponents() {
 
         <Box sx={{ display: "flex", flexDirection: "column", marginY: 2 }}>
 
-          <Button sx={{ marginY: 1 }} variant="contained" color="error">
-            Logout
-            <LogoutIcon sx={{ paddingX: 1 }} />
-          </Button>
+          <Alert />
+
           <Button
             color="primary"
             disabled={false}

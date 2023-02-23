@@ -10,13 +10,13 @@ import AppNavbar from './Navbar/AppNavbar'
 import Sidebar from './Navbar/Sidebar'
 
 function Dashboard() {
-    const { thememode, setThememode, toggleTheme } = AppState()
+    const { thememode } = AppState()
 
 
     return (
         <Box component="div" sx={{
             display: { xs: 'block', sm: 'block', md: 'block', lg: 'flex', xl: 'flex' },
-            background: thememode ? "#0e122c" : "#f8f8f8",
+            background: thememode ? "#0e122c" : "#d9d9d9",
             color: thememode ? "white" : "black",
             width: "100%", height: "100%", padding: "0", margin: "0"
         }}>
@@ -24,10 +24,9 @@ function Dashboard() {
             <AppNavbar />
 
             <Sidebar />
-            <div>
 
+            <div style={{width:"90%",height:"80%",padding:"1rem"}}>
                 <Outlet />
-
             </div>
         </Box>
     )

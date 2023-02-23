@@ -9,7 +9,6 @@ const AppProvider = ({ children }) => {
 
     const toggleTheme = ()=>{
         thememode === false ? setThememode(true) : setThememode(false)
-        localStorage.setItem("ThemeMode")
 
     }
 
