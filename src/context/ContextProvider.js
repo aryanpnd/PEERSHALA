@@ -4,11 +4,13 @@ const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
 
-    const [thememode, setThememode] = useState(false)
+    const [thememode, setThememode] = useState(true)
 
 
     const toggleTheme = ()=>{
         thememode === false ? setThememode(true) : setThememode(false)
+        localStorage.setItem("ThemeMode")
+
     }
 
   return (
