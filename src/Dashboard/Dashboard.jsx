@@ -16,7 +16,7 @@ function Dashboard() {
     return (
         <Box component="div" sx={{
             display: { xs: 'block', sm: 'block', md: 'block', lg: 'flex', xl: 'flex' },
-            background: thememode ? "#0e122c" : "#dddddd",
+            background: thememode ? "#0e122c" : "#f8f8f8",
             color: thememode ? "white" : "black",
             width: "100%", height: "100%", padding: "0", margin: "0"
         }}>

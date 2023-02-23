@@ -9,6 +9,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { AppState } from '../../context/ContextProvider';
 import ThemeToggleButton from './ThemeToggleButton';
 import AppDrawer from './AppDrawer';
+import logo from '../../assets/logo.png';
+
 
 export default function AppNavbar() {
     const { thememode, setThememode, toggleTheme } = AppState()
@@ -22,15 +24,12 @@ export default function AppNavbar() {
                 color: thememode ? "white" : "black",
             }}>
 
-                <Toolbar>
+                <Toolbar sx={{display:"flex",justifyContent:"space-between"}}>
 
                     <AppDrawer />
 
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        PEERSHALAA
-                    </Typography>
+                    <img src={logo} alt="Peershala" style={{ fontSize: "2rem", filter: thememode ? 'invert(100%)' : "", height: "2.5rem" }} />
 
-                    <ThemeToggleButton />
                     
                     <Button color="inherit">Login</Button>
 

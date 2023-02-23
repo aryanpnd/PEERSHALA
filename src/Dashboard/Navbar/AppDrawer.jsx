@@ -12,8 +12,12 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import { IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import Sidebar from './Sidebar';
+import SidebarComponents from './SidebarComponents';
+import { AppState } from '../../context/ContextProvider';
 
 export default function AppDrawer() {
+    const { thememode } = AppState()
     const [state, setState] = React.useState(false);
 
     const toggleDrawer = (anchor, open) => (event) => {
@@ -83,10 +87,8 @@ export default function AppDrawer() {
             >
 
 
-                <Box
-                    sx={{ width: 250 }}
-                >
-
+                <Box sx={{ background: thememode ? '#171d37' : 'white', width: 250, height: 1 }}>
+                    <SidebarComponents />
                 </Box>
 
 
