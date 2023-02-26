@@ -7,6 +7,7 @@ import Myprofile from './MyProfile/Myprofile'
 import Myteam from './MyTeam/Myteam'
 import AppDrawer from './Navbar/AppDrawer'
 import AppNavbar from './Navbar/AppNavbar'
+import BottomNav from './Navbar/BottomNav'
 import Sidebar from './Navbar/Sidebar'
 
 function Dashboard() {
@@ -15,19 +16,27 @@ function Dashboard() {
 
     return (
         <Box component="div" sx={{
-            display: { xs: 'block', sm: 'block', md: 'block', lg: 'flex', xl: 'flex' },
+            display: { xs: 'flex', sm: 'flex', md: 'flex', lg: 'flex', xl: 'flex' },
+            flexDirection: { xs: 'column', sm: 'column', md: 'column', lg: 'row', xl: 'row' },
             background: thememode ? "#0e122c" : "#d9d9d9",
             color: thememode ? "white" : "black",
-            width: "100%", height: "100%", padding: "0", margin: "0"
+            width: "100%", height: "100%", padding: "0", margin: "0",
+            overflow: "scroll"
         }}>
 
             <AppNavbar />
-
             <Sidebar />
 
-            <div style={{width:"90%",height:"80%",padding:"1rem"}}>
+            <Box 
+            sx={{
+                marginBottom:{ xs: '4rem', sm: '4rem', md: '4rem', lg: '0rem', xl: '0rem' },
+                marginTop:{ xs: '4rem', sm: '4rem', md: '4rem', lg: '0.1rem', xl: '0rem' },
+                width: { xs: '92', sm: '92', md: '92', lg: '100%', xl: '100%' },
+                padding: "1rem", display: "flex", flexDirection: "column"
+            }}>
                 <Outlet />
-            </div>
+            </Box>
+            <BottomNav />
         </Box>
     )
 }

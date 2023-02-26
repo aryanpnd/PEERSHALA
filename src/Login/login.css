@@ -1,0 +1,42 @@
+.text_input .MuiOutlinedInput-root {
+    border-radius: 50px;
+}
+
+.mobile_version {
+    visibility: hidden;
+}
+
+.outer {
+    overflow-y: hidden;
+}
+
+@media only screen and (max-width: 900px) {
+    .mobile_version {
+        visibility: visible;
+        margin-top: -60ch;
+    }
+
+    .outer {
+        overflow-y: visible;
+    }
+
+    .lrge_version {
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 557px) {
+    .mobile_version {
+        visibility: visible;
+        margin-bottom: -50%;
+
+    }
+
+    .outer {
+        overflow-y: visible;
+    }
+
+    .lrge_version {
+        visibility: hidden;
+    }
+}

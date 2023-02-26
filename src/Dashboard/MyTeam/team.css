@@ -1,0 +1,36 @@
+.hover_prop:hover{
+    background: "#222747";    
+}
+.font-resp{
+    font-size: 1em;
+}
+ .card_res {
+     width: 33vw;
+    height: 30vh;
+
+ }
+@media only screen and (max-width: 450px) {
+    .font-resp2{
+        font-size: 0.6em;
+    }
+    .card_res{
+        height: 30vh;
+        width: 50vw;
+        margin-left: -10%;
+    }
+}
+@media only screen and (max-width: 768px) and (min-width: 450px) {
+    .font-resp2 {
+        font-size: 0.8em;
+    }
+
+    .card_res {
+        height: 30vh;
+        width: 50vw;
+        margin-left:- 10%;
+    }
+}
+.App {
+    font-family: sans-serif;
+    text-align: center;
+}

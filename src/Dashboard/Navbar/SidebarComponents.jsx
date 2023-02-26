@@ -12,7 +12,7 @@ import Alert from './Alert';
 
 function SidebarComponents() {
   const { thememode } = AppState()
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   return (
     <Box sx={{ height: 1, overflow: "scroll" }}>
@@ -50,7 +50,7 @@ function SidebarComponents() {
         <Box sx={{ display: "flex", flexDirection: "column", marginY: 2 }}>
 
           <Button sx={{ marginY: 1 }} onClick={() => navigate("/dashboard")} >
-            <AccountCircleIcon sx={{ marginX: 1 }} />profile
+            <AccountCircleIcon sx={{ marginX: 1 }} />Profile
           </Button>
 
           <Button sx={{ marginY: 1 }} onClick={() => navigate("/dashboard/achieve")} >
@@ -58,7 +58,7 @@ function SidebarComponents() {
           </Button>
 
           <Button sx={{ marginY: 1 }} onClick={() => navigate("/dashboard/myteam")} >
-            <GroupsIcon sx={{ marginX: 1 }} /> my teams
+            <GroupsIcon sx={{ marginX: 1 }} /> My teams
           </Button>
 
         </Box>

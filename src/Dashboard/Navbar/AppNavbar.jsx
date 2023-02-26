@@ -13,24 +13,26 @@ import logo from '../../assets/logo.png';
 
 
 export default function AppNavbar() {
-    const { thememode, setThememode, toggleTheme } = AppState()
+    const { thememode } = AppState()
 
 
     return (
-        <Box sx={{ flexGrow: 1, display: { xs: 'block',sm:'block', md: 'block', lg: 'none',xl: 'none' } }}>
+        <Box sx={{ display: { xs: 'block', sm: 'block', md: 'block', lg: 'none', xl: 'none', position: "fixed",
+        top: "0px",
+        width: "100%"} }}>
 
             <AppBar position="static" sx={{
                 background: thememode ? "#070c27" : "#f6f7fb",
                 color: thememode ? "white" : "black",
             }}>
 
-                <Toolbar sx={{display:"flex",justifyContent:"space-between"}}>
+                <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
 
                     <AppDrawer />
 
                     <img src={logo} alt="Peershala" style={{ fontSize: "2rem", filter: thememode ? 'invert(100%)' : "", height: "2.5rem" }} />
 
-                    
+
                     <Button color="inherit">Login</Button>
 
                 </Toolbar>

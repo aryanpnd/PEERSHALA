@@ -9,21 +9,22 @@ import MinScreen from './MinScreen';
 function Myprofile() {
   const { thememode } = AppState()
   return (
-    < >
-      <><img src={banner} style={{ width: "100%", borderRadius: "15px" }} alt="" /></>
+    <Box sx={{overflow:"scroll",borderRadius: "15px" ,padding:"1rem"}}>
+      <>
+        <img src={banner} style={{ width: "100%", borderRadius: "15px" }} alt="" />
+      </>
 
-
-      <Box id="slideInAnim" sx={{ background: thememode ? "#1a203c" : "#e7e7e7", borderRadius: "8px" ,padding:"0px"}}>
-        <Typography fontWeight={"bold"} marginTop={1} textAlign={"center"} variant="h5" component="h2">
+      <Box margin={1} sx={{ background: thememode ? "#1a203c" : "#e7e7e7", borderRadius: "8px", padding: "0px" }}>
+        <Typography fontWeight={"bold"} textAlign={"center"} variant="h5" component="h2">
           MY PROFILE
         </Typography>
       </Box >
 
-      <Box id="slideInAnim" marginTop={2} sx={{ width: "100%", }}>
-        <MinScreen />
-        <MaxScreen />
+      <Box marginTop={2} sx={{ width: "100%" }}>
+        <div style={{ overflow: "scroll" }}><MinScreen /></div>
+        <div style={{ overflow: "scroll" }}><MaxScreen /></div>
       </Box>
-    </>
+    </Box>
   )
 }
 
