@@ -32,7 +32,11 @@ function MinScreen() {
           />
         </Box>
 
-        <Box  padding={3} sx={{ display: "flex", flexDirection: "column", background: thememode ? "#101534" : "#d9d9d9", borderRadius: "15px", textAlign: "center" }}>
+        <Paper elevation={3} padding={3} sx={{ 
+          display: "flex", flexDirection: "column",
+          color: thememode ? "#afafaf" : "#43464a",
+           background: thememode ? "#101534" : "#d9d9d9",
+            borderRadius: "15px", textAlign: "center" }}>
 
           <Typography variant="h6" component="h2">
             Name
@@ -75,7 +79,7 @@ function MinScreen() {
           <Typography color={"grey"} variant="subtitle1" gutterBottom>
             6 months
           </Typography>
-        </Box>
+        </Paper>
 
       </Paper>
       </div>

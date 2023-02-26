@@ -9,6 +9,10 @@
   animation: myAnim1 1s ease 1ms 1 alternate both;
 }
 
+#slideFromBottomAnim{
+	animation: myAnim2 2s ease 1ms 1 normal forwards;
+}
+
 @keyframes myAnim1 {
 	0% {
 		opacity: 0;
@@ -18,5 +22,17 @@
 	100% {
 		opacity: 1;
 		transform: scale(1);
+	}
+}
+
+@keyframes myAnim2 {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }

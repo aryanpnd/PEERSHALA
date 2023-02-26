@@ -10,7 +10,7 @@ function MaxScreen() {
 
 
             <Paper
-            elevation={3}
+                elevation={3}
                 sx={{
                     display: { xs: 'none', sm: 'none', md: 'none', lg: 'flex', xl: 'flex' },
                     borderRadius: "8px",
@@ -24,7 +24,12 @@ function MaxScreen() {
                 }}
             >
 
-                <Box id="slideInAnim" sx={{ display: "flex", flexDirection: "column", background: thememode ? "#101534" : "#d9d9d9", borderRadius: "15px", padding: "inherit" }}>
+                <Paper elevation={3} sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    color: thememode ? "#afafaf" : "#43464a",
+                    background: thememode ? "#101534" : "#d9d9d9", borderRadius: "15px", padding: "inherit"
+                }}>
                     <Box sx={{ display: "flex", justifyContent: 'center', marginBottom: "2rem" }}>
 
                         <Avatar
@@ -49,9 +54,13 @@ function MaxScreen() {
                         Vinay@sociovative.org
                     </Typography>
 
-                </Box>
+                </Paper>
 
-                <Box id="slideInAnim" overflow={"scroll"} sx={{ background: thememode ? "#101534" : "#d9d9d9", borderRadius: "15px", padding: "inherit" }} >
+                <Paper elevation={3} overflow={"scroll"} sx={{
+                    background: thememode ? "#101534" : "#d9d9d9",
+                    color: thememode ? "#afafaf" : "#43464a",
+                    borderRadius: "15px", padding: "inherit"
+                }} >
                     <Typography variant="h6" component="h2">
                         College Name
                     </Typography>
@@ -80,7 +89,7 @@ function MaxScreen() {
                         6 months
                     </Typography>
 
-                </Box>
+                </Paper>
 
             </Paper>
         </div>

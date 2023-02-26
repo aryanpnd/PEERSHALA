@@ -10,6 +10,7 @@ import { AppState } from '../../context/ContextProvider';
 import ThemeToggleButton from './ThemeToggleButton';
 import AppDrawer from './AppDrawer';
 import logo from '../../assets/logo.png';
+import { Avatar } from '@mui/material';
 
 
 export default function AppNavbar() {
@@ -17,7 +18,7 @@ export default function AppNavbar() {
 
 
     return (
-        <Box sx={{ display: { xs: 'block', sm: 'block', md: 'block', lg: 'none', xl: 'none', position: "fixed",
+        <Box zIndex={1000} sx={{ display: { xs: 'block', sm: 'block', md: 'block', lg: 'none', xl: 'none', position: "fixed",
         top: "0px",
         width: "100%"} }}>
 
@@ -33,7 +34,7 @@ export default function AppNavbar() {
                     <img src={logo} alt="Peershala" style={{ fontSize: "2rem", filter: thememode ? 'invert(100%)' : "", height: "2.5rem" }} />
 
 
-                    <Button color="inherit">Login</Button>
+                    <Button color="inherit"><Avatar alt="" src="" /></Button>
 
                 </Toolbar>
             </AppBar>
