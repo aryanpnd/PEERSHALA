@@ -1,48 +1,71 @@
-import { Box, Grid, Paper, Typography } from '@mui/material';
-import React from 'react'
-import styled from 'styled-components';
-import Cards from "./Cardss/Cards";
-import data from "./data";
-import "./team.css"
-function Myteam() {
-  const Item = styled(Paper)(({ theme }) => ({
+import { Box, Button, styled, Typography } from "@mui/material";
+import { Container } from "@mui/system";
+import React from "react";
+import CustomButton from "./CustomButton";
+import Process from "./Process";
+import coee from "../../assets/coee.png";
 
+const Myteam = () => {
+  const CustomBox = styled(Box)(({ theme }) => ({
+    display: "flex",
+    justifyContent: "center",
+    gap: theme.spacing(5),
+    marginTop: theme.spacing(3),
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column",
+      alignItems: "center",
+      textAlign: "center",
+    },
   }));
+
+  const Title = styled(Typography)(({ theme }) => ({
+    fontSize: "64px",
+    fontWeight: "bold",
+    margin: theme.spacing(4, 0, 4, 0),
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "40px",
+    },
+  }));
+
   return (
-    <Box sx={{overflow:"scroll",borderRadius: "15px" ,padding:"1rem"}} >
-      <Typography variant="h3" className="text-center " sx={{ marginBottom: 8, marginTop: 5 }} ><b><p className='font-resp'>About Peershala</p></b></Typography>
-      <div className="grid place-content-center text-center" sx={{ width: "60%" }}><Typography variant="h6" className="text-justify" sx={{ marginBottom: 8 }}><p className=' font-resp2'>
-        Many desktop publishing packages and web page editors now use Lorem Ipsum as their
-        default model text,and a search for 'lorem ipsum' will uncover many web sites still
-        in their infancy. Various versions have evolved over the years,
-        sometimes by accident, sometimes on purpose (injected and the like).
-      </p></Typography></div>
-      <Grid
-        container
-        spacing={4}
-        justify="center"
-      >
+    <Box sx={{ minHeight: "80vh" }}>
+      <Container>
 
-        <Grid item xs={12} sm={12} md={12} lg={4}>
-          <Cards
+        <CustomBox>
+          <Box sx={{ flex: "1" }}>
+            <Typography
+              variant="body2"
+              sx={{
+                fontSize: "18px",
+                fontWeight: "500",
+                mt: 10,
+                mb: 4,
+              }}
+            >
+              Welcome to Peershala
+            </Typography>
+            <Title variant="h1">
+              Discover a place where you'll learn
+            </Title>
+            <CustomButton
+              backgroundColor="#0F1B4C"
+              color="#fff"
+              buttonText="Start Learning"
+              heroBtn={true}
+            />
+          </Box>
 
-            heading={data[0].heading}
-            matter={data[0].matter} />
-        </Grid>
-        <Grid item xs={12} sm={12} md={12} lg={4}>
-          <Cards
+          <Box sx={{ flex: "1.25" }}>
+            <img
+              src={coee}
+              style={{ maxWidth: "100%", marginTop: "2rem" }}
+            />
+          </Box>
+        </CustomBox>
+        <Process></Process>
+      </Container>
+    </Box>
+  );
+};
 
-            heading={data[1].heading}
-            matter={data[1].matter} />
-        </Grid>
-        <Grid item xs={12} sm={12} md={12} lg={12}>
-          <Cards
-            heading={data[0].heading}
-            matter={data[0].matter} />
-        </Grid>
-      </Grid>
-      </Box>
-  )
-}
-
-export default Myteam
+export default Myteam;
