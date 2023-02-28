@@ -1,10 +1,10 @@
-import { Box, Button, styled, Typography } from "@mui/material";
+import { Box,styled, Typography } from "@mui/material";
 import React from "react";
 
 import users from "../../assets/users.png";
 import day from "../../assets/day.png";
 import certificat from "../../assets/certificat.png";
-import board from "../../assets/board.svg";
+import clas from "../../assets/clas.png";
 import user from "../../assets/user.png";
 
 const Process = () => {
@@ -47,16 +47,18 @@ const Process = () => {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        marginTop:"15%",
       }}
     >
       <div
         style={{
           width: "5%",
           height: "5px",
-          backgroundColor: "#000339",
+          backgroundColor: "grey",
           margin: "0 auto",
         }}
       ></div>
+      
 
       <Typography
         variant="h2"
@@ -88,7 +90,7 @@ const Process = () => {
         </GuideBox>
 
         <GuideBox>
-          <img sx={{width:2}} src={day}  />
+          <img  src={day}  />
           <Box
             sx={{
               cursor: "pointer",
@@ -108,7 +110,7 @@ const Process = () => {
         </GuideBox>
 
         <GuideBox>
-          <img sx={{height:2}} src={certificat}  />
+          <img  src={certificat}  />
           <Box
             sx={{
               cursor: "pointer",
@@ -128,7 +130,7 @@ const Process = () => {
           
         </GuideBox>
          <GuideBox>
-          <img sx={{height:2}} src={board}  />
+          <img src={clas}  />
           <Box
             sx={{
               cursor: "pointer",
@@ -139,7 +141,7 @@ const Process = () => {
           >
             <Typography
               variant="body2"
-              sx={{ fontWeight: "bold",marginTop:2, fontSize: "14px", color: "#0689FF" }}
+              sx={{ fontWeight: "bold",marginTop:1, fontSize: "14px", color: "#0689FF" }}
             >
               Online Classes
             </Typography>
