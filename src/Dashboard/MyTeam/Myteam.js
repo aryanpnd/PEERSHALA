@@ -3,6 +3,7 @@ import { Container } from "@mui/system";
 import React from "react";
 import CustomButton from "./CustomButton";
 import Process from "./Process";
+import Details from "./Details";
 import coee from "../../assets/coee.png";
 
 const Myteam = () => {
@@ -36,15 +37,15 @@ const Myteam = () => {
             <Typography
               variant="body2"
               sx={{
-                fontSize: "18px",
-                fontWeight: "500",
+                fontSize: "22px",
+                fontWeight: "800",
                 mt: 10,
                 mb: 4,
               }}
             >
               Welcome to Peershala
             </Typography>
-            <Title variant="h1">
+            <Title variant="h3">
               Discover a place where you'll learn
             </Title>
             <CustomButton
@@ -55,14 +56,16 @@ const Myteam = () => {
             />
           </Box>
 
-          <Box sx={{ flex: "1.25" }}>
+          <Box sx={{ flex: "1.5" }}>
             <img
               src={coee}
               style={{ maxWidth: "100%", marginTop: "2rem" }}
             />
           </Box>
         </CustomBox>
+         <Details></Details>
         <Process></Process>
+       
       </Container>
     </Box>
   );
